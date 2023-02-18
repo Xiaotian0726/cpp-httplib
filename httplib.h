@@ -587,6 +587,7 @@ private:
     void operator()() {
       for (;;) {
         std::function<void()> fn;
+        
         {
           std::unique_lock<std::mutex> lock(pool_.mutex_);
 
